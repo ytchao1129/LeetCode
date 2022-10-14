@@ -1,0 +1,17 @@
+def is_palindrome(x):
+    temp_str = str(x)
+    if len(temp_str) <= 1:
+        return True
+    left = 0
+    right = len(temp_str) - 1
+    while left < right:
+        if temp_str[left] != temp_str[right]:
+            return False
+        left = left + 1
+        right = right - 1
+    return True
+
+
+
+def is_palindrome2(x):
+    return str(x) == str(x)[::-1]
